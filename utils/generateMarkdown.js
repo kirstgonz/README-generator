@@ -21,7 +21,7 @@ function generateMarkdown(data) {
   console.log(data);
   return `
   # ${data.title}
-  
+
   ## Description
   ${data.descriptionInput}
 
@@ -32,7 +32,7 @@ function generateMarkdown(data) {
   - [License](#License)
   - [Contribute](#Contribute)
   - [Tests](#Tests)
-  - [Contact Me](#Contac)
+  - [Contact Me](#Contact)
 
   ## Installation
   ${data.installationInput}
@@ -50,7 +50,8 @@ function generateMarkdown(data) {
   ${data.testsInput}
 
   ## Contact Me!
-  ${data.emailInput}
+  - Find my GitHub profile at [${data.githubInput}](https://github.com/${data.githubInput})
+  - Email me at [${data.emailInput}](${data.emailInput})
 `;
 }
 
