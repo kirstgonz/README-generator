@@ -59,10 +59,10 @@ const questions = () => {
         }
     },
     {
-        type: 'checkbox',
-        name: 'license',
-        message: 'Which license would you like your project to have?',
-        choices: ['Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'The Unlicense']
+        type: 'list',
+        name: 'licenseInput',
+        message: 'Which license would you like your project to have? Pick one.',
+        choices: ['Mozilla', 'Apache', 'MIT', 'Unlicense', 'None'],
     },
     {
         type: 'input',
@@ -121,9 +121,6 @@ const questions = () => {
     const generateREADME = generateMarkdown(answers)
     writeToFile(generateREADME);
 })
-.then (writeToFile => {
-    console.log(writeToFile);
-  })
 };
 
 // TODO: Create a function to write README file
