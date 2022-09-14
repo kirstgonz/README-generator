@@ -104,3 +104,37 @@ const questions = () => {
         }
     }
 ])
+.then (answers => {
+    const generateREADME = generateMarkdown(answers)
+    writeToFile(generateREADME);
+})
+.then (writeToFile => {
+    console.log(writeToFile);
+  })
+};
+
+// TODO: Create a function to write README file
+const writeToFile = data => {
+    return new Promise ((resolve, reject) => {
+        fs.writeFile ('./dist/README.md', data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            resolve ({
+                ok: true,
+                message: 'Created file!'
+            });
+        });
+    });
+};
+
+// TODO: Create a function to initialize app
+function init() {
+    console.log('Welcome!');
+    questions();
+}
+
+// Function call to initialize app
+init();
