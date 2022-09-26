@@ -1,6 +1,4 @@
-# Delete me to ensure you have the dist file for your generated README to populate into! 
-
-# Delete me to ensure you have the dist file for your generated README to populate into! 
+# Delete me (this README file) to ensure you have the dist folder for your newly generated README to populate into! 
   
   # Coding Quiz
 
